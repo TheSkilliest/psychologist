@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, initial-scale=1.0">
+<title>Happy Birthday, Sehar</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:1080px;
+    height:1350px;
+    overflow:hidden;
+    background:#000;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Cormorant Garamond', serif;
+}
+
+.art-canvas{
+    width:1080px;
+    height:1350px;
+    background:#000;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.moon-container{
+    width:400px;
+    margin-top:80px;
+
+        transform:translateX(-70px);
+
+}
+
+.moon-image{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.quote{
+    width:780px;
+    margin-top:55px;
+    font-size:34px;
+    font-weight:300;
+    font-style:italic;
+    line-height:1.6;
+    letter-spacing:2.5px;
+    color:rgba(255,255,255,0.88);
+}
+
+.birth-info{
+    margin-top:25px;
+    font-size:24px;
+    font-weight:300;
+    line-height:1.9;
+    letter-spacing:4px;
+    color:rgba(223,214,198,0.72);
+}
+
+.name-container{
+    margin-top:auto;
+    margin-bottom:70px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.name{
+    font-family:'Pinyon Script', cursive;
+    font-size:100px;
+    line-height:1.05;
+    font-weight:400;
+    color:#ffffff;
+}
+
+.separator{
+    width:42px;
+    height:1px;
+    background:rgba(223,214,198,0.35);
+    margin-top:25px;
+    margin-bottom:25px;
+}
+
+.footer-date{
+    font-size:20px;
+    letter-spacing:7px;
+    text-transform:uppercase;
+    color:rgba(223,214,198,0.55);
+}
+</style>
+</head>
+<body>
+
+<div class="art-canvas">
+
+    <div class="moon-container">
+        <img
+            src="https://i.pinimg.com/736x/98/c5/6e/98c56e3656e45781018ced002da7fabd.jpg"
+            alt="Moon"
+            class="moon-image">
+    </div>
+
+    <div class="quote">
+        That's how the moon looked<br>
+        the day you were born.
+    </div>
+
+    <div class="birth-info">
+        Wednesday<br>
+        28th June, 2000
+    </div>
+
+    <div class="name-container">
+
+        <div class="name">
+            Happy Birthday,<br>
+            Sehar
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="footer-date">
+            26th birthday, 2026
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
