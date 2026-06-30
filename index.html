@@ -3,342 +3,833 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sehar Faiz | Clinical Psychologist in Lahore, Pakistan</title>
-    <meta name="description" content="Sehar Faiz is a Clinical Psychologist in Lahore offering evidence-based support for anxiety, depression, trauma, OCD, relationship issues, and family concerns.">
-    <meta name="keywords" content="Sehar Faiz psychologist Lahore, Clinical Psychologist Lahore, Therapist in Lahore, Anxiety therapy Lahore, Depression counseling Lahore, OCD psychologist Lahore, Couples therapy Lahore, Family counseling Lahore, Online psychologist Pakistan">
+    <title>Sehar Faiz | Clinical Psychologist</title>
+    <meta name="description" content="Licensed clinical psychologist offering compassionate, evidence-based therapy for individuals, couples, and families.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+      /* Fallback/additional global styles matching Tailwind classes not in style.css */
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Poppins', sans-serif; background-color: #F8FAFC; color: #1F2937; -webkit-font-smoothing: antialiased; }
+      .glass { background-color: rgba(255, 255, 255, 0.7); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.4); box-shadow: 0 8px 32px rgba(79, 70, 229, 0.08); }
+      .text-gradient { background: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+      .bg-gradient-primary { background: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%); }
+      .bg-gradient-soft { background: linear-gradient(135deg, rgba(79,70,229,0.08) 0%, rgba(6,182,212,0.08) 100%); }
+      .bg-gradient-hero { background: linear-gradient(135deg, #F8FAFC 0%, #EEF2FF 50%, #ECFEFF 100%); }
+      .shadow-elevated { box-shadow: 0 12px 40px rgba(79, 70, 229, 0.12); }
+      .shadow-card { box-shadow: 0 4px 24px rgba(31, 41, 55, 0.06); }
+      .btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; border-radius: 9999px; background: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%); padding: 0.75rem 1.5rem; font-size: 0.875rem; font-weight: 600; color: white; box-shadow: 0 12px 40px rgba(79, 70, 229, 0.12); transition: all 0.3s; cursor: pointer; text-decoration: none; border: none; }
+      .btn-primary:hover { transform: scale(1.05); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+      .btn-primary:active { transform: scale(0.95); }
+      .btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; border-radius: 9999px; border: 2px solid rgba(79, 70, 229, 0.2); background-color: white; padding: 0.75rem 1.5rem; font-size: 0.875rem; font-weight: 600; color: #4F46E5; transition: all 0.3s; cursor: pointer; text-decoration: none; }
+      .btn-secondary:hover { border-color: #4F46E5; background-color: rgba(79, 70, 229, 0.05); }
+      .btn-secondary:active { transform: scale(0.95); }
+      .section-padding { padding: 4rem 1rem; }
+      @media (min-width: 640px) { .section-padding { padding-left: 1.5rem; padding-right: 1.5rem; } }
+      @media (min-width: 1024px) { .section-padding { padding: 6rem 2rem; } }
+      .section-heading { font-size: 1.875rem; line-height: 2.25rem; font-weight: 700; letter-spacing: -0.025em; color: #1F2937; }
+      @media (min-width: 640px) { .section-heading { font-size: 2.25rem; line-height: 2.5rem; } }
+      @media (min-width: 1024px) { .section-heading { font-size: 3rem; line-height: 1; } }
+      .section-subheading { margin-top: 1rem; max-width: 42rem; font-size: 1rem; line-height: 1.5rem; color: #4B5563; }
+      @media (min-width: 640px) { .section-subheading { font-size: 1.125rem; line-height: 1.75rem; } }
+      
+      /* Utilities */
+      .text-primary { color: #4F46E5; }
+      .text-secondary { color: #06B6D4; }
+      .text-accent { color: #14B8A6; }
+      .text-text { color: #1F2937; }
+      .bg-primary { background-color: #4F46E5; }
+      .bg-secondary { background-color: #06B6D4; }
+      
+      /* Custom animations */
+      .fade-up { opacity: 0; transform: translateY(40px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+      .fade-up.visible { opacity: 1; transform: translateY(0); }
+      .float-anim { animation: float 4s ease-in-out infinite; }
+      @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0px); } }
+      
+      .accordion-content { overflow: hidden; max-height: 0; transition: max-height 0.3s ease-out, opacity 0.3s ease-out; opacity: 0; }
+      .accordion-content.open { max-height: 500px; opacity: 1; }
+      .accordion-icon { transition: transform 0.3s; }
+      .accordion-icon.rotate { transform: rotate(180deg); }
+      
+      .testimonial-slide { display: none; opacity: 0; transition: opacity 0.4s; }
+      .testimonial-slide.active { display: block; opacity: 1; }
+      
+      #mobile-menu { max-height: 0; opacity: 0; transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; overflow: hidden; }
+      #mobile-menu.open { max-height: 400px; opacity: 1; }
+      
+      .nav-scrolled { @apply glass shadow-glass py-3; }
+      header { transition: all 0.3s ease; }
+      .header-scrolled { background-color: rgba(255, 255, 255, 0.7); backdrop-filter: blur(24px); border-bottom: 1px solid rgba(255, 255, 255, 0.4); box-shadow: 0 8px 32px rgba(79, 70, 229, 0.08); padding-top: 0.75rem; padding-bottom: 0.75rem; }
+    </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">Sehar Faiz.</a>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#expertise">Expertise</a>
-                <a href="#services">Services</a>
-                <a href="#experience">Experience</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="menu-toggle">☰</div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Empowering Your Mental Wellness Journey</h1>
-                <p class="subheadline">Evidence-based psychological support for individuals, couples, and families in Lahore, Pakistan.</p>
-                <p>Professional, compassionate, and confidential care for anxiety, depression, trauma, OCD, relationship concerns, and emotional well-being.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Book a Consultation</a>
-                    <a href="#about" class="btn btn-outline">Learn More</a>
+    <!-- Header & Navbar -->
+    <header id="header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300 bg-transparent py-5">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+            <a href="#home" class="group flex items-center gap-2" style="text-decoration:none;">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-primary text-white shadow-elevated transition-transform hover:rotate-[10deg]">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="h-6 w-6 text-white" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M13 8.57a1.43 1.43 0 1 0 0 2.86 1.43 1.43 0 0 0 0-2.86z"></path><path d="M13 3C9.25 3 6.2 5.94 6.02 9.64L4.1 12.2a.5.5 0 0 0 .4.8H6v3c0 1.1.9 2 2 2h1v3h7v-4.68A6.999 6.999 0 0 0 13 3zm3 7c0 .13-.01.26-.02.39l.83.66c.08.06.1.16.05.25l-.8 1.39c-.05.09-.16.12-.24.09l-.99-.4c-.21.16-.43.29-.67.39L14 13.83c-.01.1-.1.17-.2.17h-1.6c-.1 0-.18-.07-.2-.17l-.15-1.06c-.25-.1-.47-.23-.68-.39l-.99.4c-.09.03-.2 0-.25-.09l-.8-1.39a.19.19 0 0 1 .05-.25l.84-.66c-.01-.13-.02-.26-.02-.39s.02-.27.04-.39l-.85-.66c-.08-.06-.1-.16-.05-.26l.8-1.38c.05-.09.15-.12.24-.09l1 .4c.2-.15.43-.29.67-.39L12 6.17c.02-.1.1-.17.2-.17h1.6c.1 0 .18.07.2.17l.15 1.06c.24.1.46.23.67.39l1-.4c.09-.03.2 0 .24.09l.8 1.38a.2.2 0 0 1-.05.26l-.85.66c.03.12.04.25.04.39z"></path></svg>
                 </div>
-            </div>
-            <div class="hero-image-wrapper">
-                <div class="hero-shape"></div>
-                <!-- Optional placeholder for professional portrait or soft abstract imagery -->
-                <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?q=80&w=1000&auto=format&fit=crop" alt="Calming wellness abstract">
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <!-- Second placeholder image for about section -->
-                    <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=1000&auto=format&fit=crop" alt="Soft light natural elements" style="border-radius: 16px;">
+                <div class="flex flex-col">
+                    <span class="text-sm font-bold text-text leading-tight">Sehar Faiz</span>
+                    <span class="text-xs text-gray-500">Clinical Psychologist</span>
                 </div>
-                <div class="about-text">
-                    <h2>About Sehar Faiz</h2>
-                    <p>Sehar Faiz is a Clinical Psychologist based in Lahore, Punjab, Pakistan, with academic training in Clinical Psychology and Applied Psychology. She has worked across clinical, educational, and special-needs support settings, providing evidence-based care through assessment, psychotherapy, psychoeducation, and collaborative treatment planning.</p>
-                    <p>Her experience includes working with individuals, couples, and families while addressing concerns such as anxiety, depression, trauma, relationship difficulties, and emotional distress. Her professional approach emphasizes compassion, confidentiality, structured assessment, and tailored therapeutic support.</p>
-                    <ul class="about-highlights">
-                        <li><i>✓</i> MS in Clinical Psychology</li>
-                        <li><i>✓</i> BS in Applied Psychology</li>
-                        <li><i>✓</i> Experience in clinical, school, and therapeutic care settings</li>
-                        <li><i>✓</i> Work with individuals, families, and multidisciplinary teams</li>
-                        <li><i>✓</i> Evidence-based treatment planning</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Areas of Expertise Section -->
-    <section id="expertise" class="expertise">
-        <div class="container">
-            <h2 class="section-title">Areas of Expertise</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>Anxiety and Depression</h3>
-                    <p>Support for persistent worry, panic symptoms, low mood, hopelessness, and emotional overwhelm through structured, evidence-based therapeutic approaches.</p>
-                </div>
-                <div class="card">
-                    <h3>Trauma and Emotional Distress</h3>
-                    <p>A safe and compassionate space for processing difficult experiences, emotional pain, and long-standing distress.</p>
-                </div>
-                <div class="card">
-                    <h3>OCD Support</h3>
-                    <p>Professional guidance for obsessive thoughts, compulsive behaviors, and distressing patterns that interfere with daily life.</p>
-                </div>
-                <div class="card">
-                    <h3>Relationship Issues</h3>
-                    <p>Support for interpersonal conflict, emotional disconnection, communication challenges, and relational stress.</p>
-                </div>
-                <div class="card">
-                    <h3>Family and Couples Therapy</h3>
-                    <p>Constructive therapeutic space for improving understanding, communication, and emotional connection within relationships and family systems.</p>
-                </div>
-                <div class="card">
-                    <h3>Stress and Burnout</h3>
-                    <p>Help for academic, workplace, life-transition, and emotional stress with practical coping strategies and therapeutic support.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Services Offered</h2>
-            <p class="section-subtitle">Tailored support to meet your unique emotional and psychological needs.</p>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>Individual Therapy</h3>
-                    <p>One-on-one sessions focused on emotional, behavioral, and psychological concerns through personalized treatment planning.</p>
-                </div>
-                <div class="card">
-                    <h3>Couples Therapy</h3>
-                    <p>Support for partners facing communication difficulties, recurring conflict, trust issues, and emotional disconnect.</p>
-                </div>
-                <div class="card">
-                    <h3>Family Therapy</h3>
-                    <p>Sessions that help families navigate emotional strain, conflict resolution, communication breakdowns, and healthier relationships.</p>
-                </div>
-                <div class="card">
-                    <h3>Psychological Assessment</h3>
-                    <p>Comprehensive assessments to better understand presenting concerns and support appropriate treatment planning.</p>
-                </div>
-                <div class="card">
-                    <h3>Psychoeducation</h3>
-                    <p>Structured guidance to help clients understand their mental health concerns, coping processes, and treatment goals.</p>
-                </div>
-                <div class="card">
-                    <h3>Online Consultation</h3>
-                    <p>Remote sessions for clients who prefer secure online support or are unable to attend in person.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Therapeutic Approach Section -->
-    <section class="qualifications">
-        <div class="container">
-            <h2 class="section-title">Therapeutic Approach</h2>
-            <div class="approach-box">
-                <p>Sehar Faiz follows a client-centered and evidence-based approach to therapy. Her work emphasizes careful assessment, individualized treatment planning, emotional safety, and collaborative care that responds to the unique needs of each client.</p>
-                <br>
-                <p>She also values multidisciplinary coordination where needed, ensuring that support is thoughtful, responsible, and aligned with best practices in mental health care.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience & Qualifications Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Professional Journey</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Sep 2025 – Apr 2026</span>
-                        <h4>Behavioral Therapist</h4>
-                        <p>Roots Millennium Schools & Colleges - TME</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">May 2025 – Jun 2025</span>
-                        <h4>ABA Therapist</h4>
-                        <p>Bright Therapeutic Center, Lahore</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Feb 2025 – May 2025</span>
-                        <h4>Clinical Psychologist</h4>
-                        <p>Roshni association society for welfare of special persons</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Sep 2024 – Dec 2024</span>
-                        <h4>Behavioral Therapist</h4>
-                        <p>Jibran khalid school</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Mar 2024 – Sep 2024</span>
-                        <h4>Intern Psychologist</h4>
-                        <p>Fountain House</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Sep 2023 – Mar 2024</span>
-                        <h4>Internee Psychologist</h4>
-                        <p>Rising Sun Institute for Special Children, Lahore</p>
-                    </div>
-                </div>
-            </div>
-
-            <div style="margin-top: 80px;">
-                <h2 class="section-title">Education and Training</h2>
-                <div class="qualifications-grid">
-                    <div class="edu-card">
-                        <h4>MS in Clinical Psychology</h4>
-                        <p>Lahore Garrison University</p>
-                    </div>
-                    <div class="edu-card">
-                        <h4>BS in Applied Psychology</h4>
-                        <p>University of the Punjab</p>
-                    </div>
-                </div>
-                <p style="text-align: center; margin-top: 2rem;">Academic training grounded in psychology, clinical practice, and evidence-based mental health care.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Section -->
-    <section class="why-choose">
-        <div class="container">
-            <h2 class="section-title">Why Clients May Trust This Practice</h2>
-            <div class="reasons-grid">
-                <div class="reason-item">
-                    <div class="reason-icon">✦</div>
-                    <p>Evidence-based therapeutic support</p>
-                </div>
-                <div class="reason-item">
-                    <div class="reason-icon">✦</div>
-                    <p>Experience across clinical and educational settings</p>
-                </div>
-                <div class="reason-item">
-                    <div class="reason-icon">✦</div>
-                    <p>Work with individuals, couples, and families</p>
-                </div>
-                <div class="reason-item">
-                    <div class="reason-icon">✦</div>
-                    <p>Strong background in psychoeducation and psychotherapy</p>
-                </div>
-                <div class="reason-item">
-                    <div class="reason-icon">✦</div>
-                    <p>Bilingual communication in Urdu and English</p>
-                </div>
-                <div class="reason-item">
-                    <div class="reason-icon">✦</div>
-                    <p>Compassionate and confidential care</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container contact-container">
-            <h2 class="section-title">Get in Touch</h2>
-            <p>Take the first step toward better mental health and emotional well-being. Booking a consultation provides a safe and supportive space.</p>
+            </a>
             
-            <div class="contact-info" style="margin-top: 2rem;">
-                <p>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    Lahore, Punjab, Pakistan
-                </p>
-                <p>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                    <a href="https://pk.linkedin.com/in/sehar-faiz-74a44b355" target="_blank" style="color: var(--text-dark);">LinkedIn Profile</a>
-                </p>
+            <div class="hidden items-center gap-8 lg:flex">
+                <a href="#home" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Home</a>
+                <a href="#about" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">About</a>
+                <a href="#services" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Services</a>
+                <a href="#blog" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Blog</a>
+                <a href="#contact" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Contact</a>
+                <a href="#contact" class="btn-primary text-sm">Book Appointment</a>
             </div>
             
-            <a href="https://wa.me/?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Sehar%20Faiz." target="_blank" class="btn btn-primary" style="background-color: #25D366; border-color: #25D366;">Message on WhatsApp</a>
+            <button id="mobile-menu-btn" class="rounded-lg p-2 text-text lg:hidden" aria-label="Toggle menu">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="glass border-t border-white/20 lg:hidden">
+            <div class="flex flex-col gap-1 px-4 py-4">
+                <a href="#home" class="mobile-link block rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary/5 hover:text-primary">Home</a>
+                <a href="#about" class="mobile-link block rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary/5 hover:text-primary">About</a>
+                <a href="#services" class="mobile-link block rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary/5 hover:text-primary">Services</a>
+                <a href="#blog" class="mobile-link block rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary/5 hover:text-primary">Blog</a>
+                <a href="#contact" class="mobile-link block rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary/5 hover:text-primary">Contact</a>
+                <a href="#contact" class="mobile-link btn-primary mt-2 text-center text-sm">Book Appointment</a>
+            </div>
         </div>
-    </section>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen overflow-hidden bg-gradient-hero pt-28 pb-16 lg:pt-32">
+            <div class="pointer-events-none absolute inset-0 overflow-hidden">
+                <div class="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl opacity-50"></div>
+                <div class="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-secondary/10 blur-3xl opacity-50"></div>
+            </div>
+            
+            <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8 fade-up">
+                <div>
+                    <div>
+                        <span class="inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+                            Licensed Clinical Psychologist
+                        </span>
+                    </div>
+                    
+                    <h1 class="mt-6 text-4xl font-bold leading-tight tracking-tight text-text sm:text-5xl lg:text-6xl">
+                        Helping You <span class="text-gradient">Heal, Grow</span> & Live Better
+                    </h1>
+                    
+                    <p class="mt-6 max-w-lg text-lg text-gray-600">
+                        Compassionate, evidence-based therapy tailored to your unique journey. Take the first step toward emotional wellness with a trusted professional by your side.
+                    </p>
+                    
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="#contact" class="btn-primary">
+                            Book Appointment <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </a>
+                        <a href="#about" class="btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="relative mx-auto w-full max-w-md lg:max-w-none fade-up">
+                    <div class="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl shadow-elevated lg:max-w-md">
+                        <div class="absolute inset-0 bg-gradient-primary opacity-10"></div>
+                        <img src="images/hero-girl.jpg" alt="Professional clinical psychologist" class="object-cover w-full h-full absolute inset-0">
+                    </div>
+                    
+                    <!-- Floating Cards -->
+                    <div class="absolute hidden sm:block float-anim" style="top: 8%; left: -8%; animation-delay: 0s;">
+                        <div class="glass flex items-center gap-2 rounded-2xl px-4 py-3 shadow-card">
+                            <span class="flex h-6 w-6 items-center justify-center rounded-full bg-accent/20 text-accent"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-3.5 w-3.5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></span>
+                            <span class="whitespace-nowrap text-sm font-semibold text-text">Anxiety Support</span>
+                        </div>
+                    </div>
+                    <div class="absolute hidden sm:block float-anim" style="top: 30%; right: -5%; animation-delay: 0.5s;">
+                        <div class="glass flex items-center gap-2 rounded-2xl px-4 py-3 shadow-card">
+                            <span class="flex h-6 w-6 items-center justify-center rounded-full bg-accent/20 text-accent"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-3.5 w-3.5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></span>
+                            <span class="whitespace-nowrap text-sm font-semibold text-text">Depression Therapy</span>
+                        </div>
+                    </div>
+                    <div class="absolute hidden sm:block float-anim" style="bottom: 30%; left: -12%; animation-delay: 1s;">
+                        <div class="glass flex items-center gap-2 rounded-2xl px-4 py-3 shadow-card">
+                            <span class="flex h-6 w-6 items-center justify-center rounded-full bg-accent/20 text-accent"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-3.5 w-3.5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></span>
+                            <span class="whitespace-nowrap text-sm font-semibold text-text">Family Counseling</span>
+                        </div>
+                    </div>
+                    <div class="absolute hidden sm:block float-anim" style="bottom: 8%; right: -8%; animation-delay: 1.5s;">
+                        <div class="glass flex items-center gap-2 rounded-2xl px-4 py-3 shadow-card">
+                            <span class="flex h-6 w-6 items-center justify-center rounded-full bg-accent/20 text-accent"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-3.5 w-3.5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></span>
+                            <span class="whitespace-nowrap text-sm font-semibold text-text">Stress Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding bg-white">
+            <div class="mx-auto max-w-7xl fade-up">
+                <div class="text-center mb-16">
+                    <span class="text-sm font-semibold uppercase tracking-wider text-primary">About Me</span>
+                    <h2 class="section-heading mx-auto mt-2">Professional <span class="text-gradient">Profile</span></h2>
+                </div>
+                
+                <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+                    <div class="relative">
+                        <div class="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-elevated">
+                            <img src="images/psychologist.jpg" alt="Sehar Faiz - Clinical Psychologist" class="object-cover w-full h-full absolute inset-0">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 hidden h-48 w-48 rounded-3xl bg-gradient-primary opacity-20 blur-2xl lg:block"></div>
+                    </div>
+                    
+                    <div>
+                        <h2 class="section-heading mt-2">Your Partner in <span class="text-gradient">Mental Wellness</span></h2>
+                        <p class="mt-6 text-gray-600 leading-relaxed">I'm Sehar Faiz, a Clinical Psychologist with over 5 years of experience providing online and in-person psychological services to children, adolescents, and adults.</p>
+                        
+                        <div class="mt-8 space-y-4">
+                            <div class="rounded-2xl bg-gradient-soft p-4">
+                                <h3 class="font-semibold text-primary">Education</h3>
+                                <p class="mt-1 text-sm text-gray-600">I hold a BS in Applied Psychology from the University of the Punjab and an MS in Clinical Psychology from Lahore Garrison University.</p>
+                            </div>
+                            <div class="rounded-2xl bg-gradient-soft p-4">
+                                <h3 class="font-semibold text-primary">Experience</h3>
+                                <p class="mt-1 text-sm text-gray-600">My clinical experience spans hospitals, clinics, and educational settings, where I have provided psychological assessment and therapy to children, adolescents, and adults experiencing diverse emotional, behavioral, developmental, and mental health challenges.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                            <div class="rounded-2xl border border-accent/20 bg-accent/5 p-4">
+                                <h3 class="font-semibold text-accent">Mission</h3>
+                                <p class="mt-2 text-sm text-gray-600">My mission is to provide accessible, compassionate mental health care that empowers every person to heal, grow, and live authentically. I believe everyone deserves a safe space to be heard and supported without judgment.</p>
+                            </div>
+                            <div class="rounded-2xl border border-secondary/20 bg-secondary/5 p-4">
+                                <h3 class="font-semibold text-secondary">Vision</h3>
+                                <p class="mt-2 text-sm text-gray-600">I envision a world where seeking therapy is normalized and celebrated — where mental health is prioritized with the same importance as physical health, and where every individual has the tools to thrive emotionally.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Counters -->
+                <div class="mt-20 grid grid-cols-2 gap-6 lg:grid-cols-4 fade-up">
+                    <div class="glass rounded-2xl p-6 text-center">
+                        <div class="text-3xl font-bold text-gradient sm:text-4xl"><span class="counter" data-target="5">0</span>+</div>
+                        <p class="mt-2 text-sm font-medium text-gray-600">Years Experience</p>
+                    </div>
+                    <div class="glass rounded-2xl p-6 text-center">
+                        <div class="text-3xl font-bold text-gradient sm:text-4xl"><span class="counter" data-target="150">0</span>+</div>
+                        <p class="mt-2 text-sm font-medium text-gray-600">Happy Clients</p>
+                    </div>
+                    <div class="glass rounded-2xl p-6 text-center">
+                        <div class="text-3xl font-bold text-gradient sm:text-4xl"><span class="counter" data-target="1000">0</span>+</div>
+                        <p class="mt-2 text-sm font-medium text-gray-600">Therapy Sessions</p>
+                    </div>
+                    <div class="glass rounded-2xl p-6 text-center">
+                        <div class="text-3xl font-bold text-gradient sm:text-4xl"><span class="counter" data-target="50">0</span>+</div>
+                        <p class="mt-2 text-sm font-medium text-gray-600">Workshops</p>
+                    </div>
+                </div>
+                
+                <!-- Experience Timeline -->
+                <div class="mt-24 pt-12 border-t border-gray-100 fade-up">
+                    <h2 class="section-heading text-center">Experience Timeline</h2>
+                    <div class="relative mt-12">
+                        <div class="absolute left-4 top-0 hidden h-full w-0.5 bg-gradient-primary md:left-1/2 md:block"></div>
+                        <div class="space-y-12">
+                            <!-- Item 1 -->
+                            <div class="relative flex flex-col gap-6 md:flex-row md:flex-row-reverse">
+                                <div class="hidden md:block md:w-1/2"></div>
+                                <div class="md:w-1/2 md:pr-12 md:text-right">
+                                    <div class="rounded-2xl border border-gray-100 bg-white p-6 shadow-card">
+                                        <span class="text-sm font-semibold text-primary">2026 – Present</span>
+                                        <h3 class="mt-2 text-lg font-bold text-text">Private Practice Clinical Psychologist</h3>
+                                        <p class="mt-1 text-sm font-medium text-secondary">Learn HQ, Lahore</p>
+                                        <p class="mt-3 text-sm text-gray-600">Helping children thrive by providing personalized psychological care for anxiety, autism, ADHD, emotional regulation, behavioral concerns, and developmental well-being.</p>
+                                    </div>
+                                </div>
+                                <div class="absolute left-4 top-6 hidden h-4 w-4 -translate-x-1/2 rounded-full border-4 border-white bg-primary shadow-elevated md:left-1/2 md:block"></div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="relative flex flex-col gap-6 md:flex-row">
+                                <div class="hidden md:block md:w-1/2"></div>
+                                <div class="md:w-1/2 md:pl-12">
+                                    <div class="rounded-2xl border border-gray-100 bg-white p-6 shadow-card">
+                                        <span class="text-sm font-semibold text-primary">2021 to Present</span>
+                                        <h3 class="mt-2 text-lg font-bold text-text">Clinical Psychologist</h3>
+                                        <p class="mt-1 text-sm font-medium text-secondary">Online Sessions</p>
+                                        <p class="mt-3 text-sm text-gray-600">Providing evidence-based online psychological therapy to adults experiencing anxiety, depression, OCD, trauma, stress, relationship difficulties, and adjustment challenges, with a focus on individualized treatment and long-term emotional well-being.</p>
+                                    </div>
+                                </div>
+                                <div class="absolute left-4 top-6 hidden h-4 w-4 -translate-x-1/2 rounded-full border-4 border-white bg-primary shadow-elevated md:left-1/2 md:block"></div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="relative flex flex-col gap-6 md:flex-row md:flex-row-reverse">
+                                <div class="hidden md:block md:w-1/2"></div>
+                                <div class="md:w-1/2 md:pr-12 md:text-right">
+                                    <div class="rounded-2xl border border-gray-100 bg-white p-6 shadow-card">
+                                        <span class="text-sm font-semibold text-primary">2025 – 2026</span>
+                                        <h3 class="mt-2 text-lg font-bold text-text">Clinical Psychologist</h3>
+                                        <p class="mt-1 text-sm font-medium text-secondary">Roots Millennium School</p>
+                                        <p class="mt-3 text-sm text-gray-600">Supported children and their families through evidence-based psychological assessment and therapy, fostering healthy emotional, behavioral, and developmental growth.</p>
+                                    </div>
+                                </div>
+                                <div class="absolute left-4 top-6 hidden h-4 w-4 -translate-x-1/2 rounded-full border-4 border-white bg-primary shadow-elevated md:left-1/2 md:block"></div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="relative flex flex-col gap-6 md:flex-row">
+                                <div class="hidden md:block md:w-1/2"></div>
+                                <div class="md:w-1/2 md:pl-12">
+                                    <div class="rounded-2xl border border-gray-100 bg-white p-6 shadow-card">
+                                        <span class="text-sm font-semibold text-primary">2024 - 2025</span>
+                                        <h3 class="mt-2 text-lg font-bold text-text">Internee Clinical Psychologist</h3>
+                                        <p class="mt-1 text-sm font-medium text-secondary">Fountain House</p>
+                                        <p class="mt-3 text-sm text-gray-600">Worked in outpatient psychiatry delivering evidence-based treatments including CBT, DBT, and EMDR for complex cases.</p>
+                                    </div>
+                                </div>
+                                <div class="absolute left-4 top-6 hidden h-4 w-4 -translate-x-1/2 rounded-full border-4 border-white bg-primary shadow-elevated md:left-1/2 md:block"></div>
+                            </div>
+                            <!-- Item 5 -->
+                            <div class="relative flex flex-col gap-6 md:flex-row md:flex-row-reverse">
+                                <div class="hidden md:block md:w-1/2"></div>
+                                <div class="md:w-1/2 md:pr-12 md:text-right">
+                                    <div class="rounded-2xl border border-gray-100 bg-white p-6 shadow-card">
+                                        <span class="text-sm font-semibold text-primary">2023 - 2024</span>
+                                        <h3 class="mt-2 text-lg font-bold text-text">Psychology Intern</h3>
+                                        <p class="mt-1 text-sm font-medium text-secondary">Rising Sun Institute</p>
+                                        <p class="mt-3 text-sm text-gray-600">Specializing in psychological assessment and for children, helping them overcome emotional, behavioral, developmental, and learning challenges while supporting their families</p>
+                                    </div>
+                                </div>
+                                <div class="absolute left-4 top-6 hidden h-4 w-4 -translate-x-1/2 rounded-full border-4 border-white bg-primary shadow-elevated md:left-1/2 md:block"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section-padding bg-gradient-soft fade-up">
+            <div class="mx-auto max-w-7xl">
+                <div class="text-center">
+                    <span class="text-sm font-semibold uppercase tracking-wider text-primary">Our Services</span>
+                    <h2 class="section-heading mx-auto mt-2">Comprehensive <span class="text-gradient">Therapy Services</span></h2>
+                    <p class="section-subheading mx-auto">Evidence-based therapeutic approaches tailored to your unique needs, delivered with compassion and professional expertise.</p>
+                </div>
+                
+                <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <!-- Service 1 -->
+                    <div class="group flex h-full flex-col rounded-2xl bg-white p-6 shadow-card transition-shadow duration-300 hover:shadow-elevated hover:-translate-y-2 transform transition-transform">
+                        <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-primary text-white shadow-elevated transition-transform duration-300 group-hover:scale-110">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zM104 424c0 13.3 10.7 24 24 24s24-10.7 24-24-10.7-24-24-24-24 10.7-24 24zm216-135.4v49c36.5 7.4 64 39.8 64 78.4v41.7c0 7.6-5.4 14.2-12.9 15.7l-32.2 6.4c-4.3.9-8.5-1.9-9.4-6.3l-3.1-15.7c-.9-4.3 1.9-8.6 6.3-9.4l19.3-3.9V416c0-62.8-96-65.1-96 1.9v26.7l19.3 3.9c4.3.9 7.1 5.1 6.3 9.4l-3.1 15.7c-.9 4.3-5.1 7.1-9.4 6.3l-31.2-4.2c-7.9-1.1-13.8-7.8-13.8-15.9V416c0-38.6 27.5-70.9 64-78.4v-45.2c-2.2.7-4.4 1.1-6.6 1.9-18 6.3-37.3 9.8-57.4 9.8s-39.4-3.5-57.4-9.8c-7.4-2.6-14.9-4.2-22.6-5.2v81.6c23.1 6.9 40 28.1 40 53.4 0 30.9-25.1 56-56 56s-56-25.1-56-56c0-25.3 16.9-46.5 40-53.4v-80.4C48.5 301 0 355.8 0 422.4v44.8C0 491.9 20.1 512 44.8 512h358.4c24.7 0 44.8-20.1 44.8-44.8v-44.8c0-72-56.8-130.3-128-133.8z"></path></svg>
+                        </div>
+                        <h3 class="mt-5 text-lg font-bold text-text">Individual Therapy</h3>
+                        <p class="mt-3 flex-1 text-sm leading-relaxed text-gray-600">Personalized one-on-one sessions to help you navigate life's challenges, build resilience, and achieve emotional well-being.</p>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="group flex h-full flex-col rounded-2xl bg-white p-6 shadow-card transition-shadow duration-300 hover:shadow-elevated hover:-translate-y-2 transform transition-transform">
+                        <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-primary text-white shadow-elevated transition-transform duration-300 group-hover:scale-110">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M120 72c0-39.765 32.235-72 72-72s72 32.235 72 72c0 39.764-32.235 72-72 72s-72-32.236-72-72zm254.627 1.373c-12.496-12.497-32.758-12.497-45.254 0L242.745 160H141.254L54.627 73.373c-12.496-12.497-32.758-12.497-45.254 0-12.497 12.497-12.497 32.758 0 45.255L104 213.254V480c0 17.673 14.327 32 32 32h16c17.673 0 32-14.327 32-32V368h16v112c0 17.673 14.327 32 32 32h16c17.673 0 32-14.327 32-32V213.254l94.627-94.627c12.497-12.497 12.497-32.757 0-45.254z"></path></svg>
+                        </div>
+                        <h3 class="mt-5 text-lg font-bold text-text">Child Counseling</h3>
+                        <p class="mt-3 flex-1 text-sm leading-relaxed text-gray-600">Gentle, age-appropriate therapy for children dealing with anxiety, behavioral issues, trauma, or family transitions.</p>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="group flex h-full flex-col rounded-2xl bg-white p-6 shadow-card transition-shadow duration-300 hover:shadow-elevated hover:-translate-y-2 transform transition-transform">
+                        <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-primary text-white shadow-elevated transition-transform duration-300 group-hover:scale-110">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                        </div>
+                        <h3 class="mt-5 text-lg font-bold text-text">Couple Therapy</h3>
+                        <p class="mt-3 flex-1 text-sm leading-relaxed text-gray-600">Strengthen your relationship through improved communication, conflict resolution, and deeper emotional connection.</p>
+                    </div>
+                    
+                    <!-- Service 4 -->
+                    <div class="group flex h-full flex-col rounded-2xl bg-white p-6 shadow-card transition-shadow duration-300 hover:shadow-elevated hover:-translate-y-2 transform transition-transform">
+                        <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-primary text-white shadow-elevated transition-transform duration-300 group-hover:scale-110">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z"></path></svg>
+                        </div>
+                        <h3 class="mt-5 text-lg font-bold text-text">Family Therapy</h3>
+                        <p class="mt-3 flex-1 text-sm leading-relaxed text-gray-600">Heal family dynamics, improve understanding, and create a supportive home environment for every member.</p>
+                    </div>
+                    
+                    <!-- Service 5 -->
+                    <div class="group flex h-full flex-col rounded-2xl bg-white p-6 shadow-card transition-shadow duration-300 hover:shadow-elevated hover:-translate-y-2 transform transition-transform">
+                        <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-primary text-white shadow-elevated transition-transform duration-300 group-hover:scale-110">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M208 0c-29.9 0-54.7 20.5-61.8 48.2-.8 0-1.4-.2-2.2-.2-35.3 0-64 28.7-64 64 0 4.8.6 9.5 1.7 14C52.5 138 32 166.6 32 200c0 12.6 3.2 24.3 8.3 34.9C16.3 248.7 0 274.3 0 304c0 33.3 20.4 61.9 49.4 73.9-.9 4.6-1.4 9.3-1.4 14.1 0 39.8 32.2 72 72 72 4.1 0 8.1-.5 12-1.2 9.6 28.5 36.2 49.2 68 49.2 39.8 0 72-32.2 72-72V64c0-35.3-28.7-64-64-64zm368 304c0-29.7-16.3-55.3-40.3-69.1 5.2-10.6 8.3-22.3 8.3-34.9 0-33.4-20.5-62-49.7-74 1-4.5 1.7-9.2 1.7-14 0-35.3-28.7-64-64-64-.8 0-1.5.2-2.2.2C422.7 20.5 397.9 0 368 0c-35.3 0-64 28.6-64 64v376c0 39.8 32.2 72 72 72 31.8 0 58.4-20.7 68-49.2 3.9.7 7.9 1.2 12 1.2 39.8 0 72-32.2 72-72 0-4.8-.5-9.5-1.4-14.1 29-12 49.4-40.6 49.4-73.9z"></path></svg>
+                        </div>
+                        <h3 class="mt-5 text-lg font-bold text-text">Stress Management</h3>
+                        <p class="mt-3 flex-1 text-sm leading-relaxed text-gray-600">Learn practical coping strategies and mindfulness techniques to manage stress and prevent burnout.</p>
+                    </div>
+                    
+                    <!-- Service 6 -->
+                    <div class="group flex h-full flex-col rounded-2xl bg-white p-6 shadow-card transition-shadow duration-300 hover:shadow-elevated hover:-translate-y-2 transform transition-transform">
+                        <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-primary text-white shadow-elevated transition-transform duration-300 group-hover:scale-110">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256.1 446.3l-.1-381 175.9 73.3c-3.3 151.4-82.1 261.1-175.8 307.7z"></path></svg>
+                        </div>
+                        <h3 class="mt-5 text-lg font-bold text-text">Trauma Therapy</h3>
+                        <p class="mt-3 flex-1 text-sm leading-relaxed text-gray-600">Safe, trauma-informed care using EMDR and other evidence-based approaches to help you heal and move forward.</p>
+                    </div>
+                    
+                    <!-- Service 7 -->
+                    <div class="group flex h-full flex-col rounded-2xl bg-white p-6 shadow-card transition-shadow duration-300 hover:shadow-elevated hover:-translate-y-2 transform transition-transform">
+                        <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-primary text-white shadow-elevated transition-transform duration-300 group-hover:scale-110">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M13 8.57a1.43 1.43 0 1 0 0 2.86 1.43 1.43 0 0 0 0-2.86z"></path><path d="M13 3C9.25 3 6.2 5.94 6.02 9.64L4.1 12.2a.5.5 0 0 0 .4.8H6v3c0 1.1.9 2 2 2h1v3h7v-4.68A6.999 6.999 0 0 0 13 3zm3 7c0 .13-.01.26-.02.39l.83.66c.08.06.1.16.05.25l-.8 1.39c-.05.09-.16.12-.24.09l-.99-.4c-.21.16-.43.29-.67.39L14 13.83c-.01.1-.1.17-.2.17h-1.6c-.1 0-.18-.07-.2-.17l-.15-1.06c-.25-.1-.47-.23-.68-.39l-.99.4c-.09.03-.2 0-.25-.09l-.8-1.39a.19.19 0 0 1 .05-.25l.84-.66c-.01-.13-.02-.26-.02-.39s.02-.27.04-.39l-.85-.66c-.08-.06-.1-.16-.05-.26l.8-1.38c.05-.09.15-.12.24-.09l1 .4c.2-.15.43-.29.67-.39L12 6.17c.02-.1.1-.17.2-.17h1.6c.1 0 .18.07.2.17l.15 1.06c.24.1.46.23.67.39l1-.4c.09-.03.2 0 .24.09l.8 1.38a.2.2 0 0 1-.05.26l-.85.66c.03.12.04.25.04.39z"></path></svg>
+                        </div>
+                        <h3 class="mt-5 text-lg font-bold text-text">Anxiety Treatment</h3>
+                        <p class="mt-3 flex-1 text-sm leading-relaxed text-gray-600">Comprehensive treatment for generalized anxiety, panic attacks, social anxiety, and phobias using CBT and exposure therapy.</p>
+                    </div>
+                    
+                    <!-- Service 8 -->
+                    <div class="group flex h-full flex-col rounded-2xl bg-white p-6 shadow-card transition-shadow duration-300 hover:shadow-elevated hover:-translate-y-2 transform transition-transform">
+                        <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-primary text-white shadow-elevated transition-transform duration-300 group-hover:scale-110">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M275.3 250.5c7 7.4 18.4 7.4 25.5 0l108.9-114.2c31.6-33.2 29.8-88.2-5.6-118.8-30.8-26.7-76.7-21.9-104.9 7.7L288 36.9l-11.1-11.6C248.7-4.4 202.8-9.2 172 17.5c-35.3 30.6-37.2 85.6-5.6 118.8l108.9 114.2zm290 77.6c-11.8-10.7-30.2-10-42.6 0L430.3 402c-11.3 9.1-25.4 14-40 14H272c-8.8 0-16-7.2-16-16s7.2-16 16-16h78.3c15.9 0 30.7-10.9 33.3-26.6 3.3-20-12.1-37.4-31.6-37.4H192c-27 0-53.1 9.3-74.1 26.3L71.4 384H16c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16h356.8c14.5 0 28.6-4.9 40-14L564 377c15.2-12.1 16.4-35.3 1.3-48.9z"></path></svg>
+                        </div>
+                        <h3 class="mt-5 text-lg font-bold text-text">Depression Therapy</h3>
+                        <p class="mt-3 flex-1 text-sm leading-relaxed text-gray-600">Compassionate support and proven therapeutic methods to help you overcome depression and rediscover joy in life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Me -->
+        <section id="why-choose" class="section-padding bg-white fade-up">
+            <div class="mx-auto max-w-7xl">
+                <div class="text-center">
+                    <span class="text-sm font-semibold uppercase tracking-wider text-primary">Why Choose Me</span>
+                    <h2 class="section-heading mx-auto mt-2">A Trusted Partner for Your <span class="text-gradient">Healing Journey</span></h2>
+                    <p class="section-subheading mx-auto">I combine clinical expertise with genuine compassion to create a therapeutic experience that truly makes a difference.</p>
+                </div>
+                
+                <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="group rounded-2xl border border-gray-100 bg-white p-6 shadow-card transition-all duration-300 hover:border-primary/20 hover:shadow-elevated hover:-translate-y-1 transform transition-transform">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-gradient-primary group-hover:text-white">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path></svg>
+                        </div>
+                        <h3 class="mt-4 text-lg font-bold text-text">Confidential Sessions</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-gray-600">Your privacy is sacred. All sessions are strictly confidential and conducted in a safe, judgment-free space.</p>
+                    </div>
+                    <div class="group rounded-2xl border border-gray-100 bg-white p-6 shadow-card transition-all duration-300 hover:border-primary/20 hover:shadow-elevated hover:-translate-y-1 transform transition-transform">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-gradient-primary group-hover:text-white">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM192 40c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm121.2 231.8l-143 141.8c-4.7 4.7-12.3 4.6-17-.1l-82.6-83.3c-4.7-4.7-4.6-12.3.1-17L99.1 285c4.7-4.7 12.3-4.6 17 .1l46 46.4 106-105.2c4.7-4.7 12.3-4.6 17 .1l28.2 28.4c4.7 4.8 4.6 12.3-.1 17z"></path></svg>
+                        </div>
+                        <h3 class="mt-4 text-lg font-bold text-text">Evidence-Based Therapy</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-gray-600">Treatment approaches grounded in scientific research including CBT, DBT, ACT, and mindfulness-based therapies.</p>
+                    </div>
+                    <div class="group rounded-2xl border border-gray-100 bg-white p-6 shadow-card transition-all duration-300 hover:border-primary/20 hover:shadow-elevated hover:-translate-y-1 transform transition-transform">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-gradient-primary group-hover:text-white">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M458.622 255.92l45.985-45.005c13.708-12.977 7.316-36.039-10.664-40.339l-62.65-15.99 17.661-62.015c4.991-17.838-11.829-34.663-29.661-29.671l-61.994 17.667-15.984-62.671C337.085.197 313.765-6.276 300.99 7.228L256 53.57 211.011 7.229c-12.63-13.351-36.047-7.234-40.325 10.668l-15.984 62.671-61.995-17.667C74.87 57.907 58.056 74.738 63.046 92.572l17.661 62.015-62.65 15.99C.069 174.878-6.31 197.944 7.392 210.915l45.985 45.005-45.985 45.004c-13.708 12.977-7.316 36.039 10.664 40.339l62.65 15.99-17.661 62.015c-4.991 17.838 11.829 34.663 29.661 29.671l61.994-17.667 15.984 62.671c4.439 18.575 27.696 24.018 40.325 10.668L256 458.61l44.989 46.001c12.5 13.488 35.987 7.486 40.325-10.668l15.984-62.671 61.994 17.667c17.836 4.994 34.651-11.837 29.661-29.671l-17.661-62.015 62.65-15.99c17.987-4.302 24.366-27.367 10.664-40.339l-45.984-45.004z"></path></svg>
+                        </div>
+                        <h3 class="mt-4 text-lg font-bold text-text">Certified Psychologist</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-gray-600">Licensed and board-certified with over a decade of clinical experience across diverse therapeutic settings.</p>
+                    </div>
+                    <div class="group rounded-2xl border border-gray-100 bg-white p-6 shadow-card transition-all duration-300 hover:border-primary/20 hover:shadow-elevated hover:-translate-y-1 transform transition-transform">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-gradient-primary group-hover:text-white">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M519.442 288.651c-41.519 0-59.5 31.593-82.058 31.593C377.409 320.244 432 144 432 144s-196.288 80-196.288-3.297c0-35.827 36.288-46.25 36.288-85.985C272 19.216 243.885 0 210.539 0c-34.654 0-66.366 18.891-66.366 56.346 0 41.364 31.711 59.277 31.711 81.75C175.885 207.719 0 166.758 0 166.758v333.237s178.635 41.047 178.635-28.662c0-22.473-40-40.107-40-81.471 0-37.456 29.25-56.346 63.577-56.346 33.673 0 61.788 19.216 61.788 54.717 0 39.735-36.288 50.158-36.288 85.985 0 60.803 129.675 25.73 181.23 25.73 0 0-34.725-120.101 25.827-120.101 35.962 0 46.423 36.152 86.308 36.152C556.712 416 576 387.99 576 354.443c0-34.199-18.962-65.792-56.558-65.792z"></path></svg>
+                        </div>
+                        <h3 class="mt-4 text-lg font-bold text-text">Personalized Care</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-gray-600">Every treatment plan is tailored to your unique needs, goals, and personal journey toward healing.</p>
+                    </div>
+                    <div class="group rounded-2xl border border-gray-100 bg-white p-6 shadow-card transition-all duration-300 hover:border-primary/20 hover:shadow-elevated hover:-translate-y-1 transform transition-transform">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-gradient-primary group-hover:text-white">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M232 224h56v56a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8v-56h56a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8h-56v-56a8 8 0 0 0-8-8h-48a8 8 0 0 0-8 8v56h-56a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8zM576 48a48.14 48.14 0 0 0-48-48H112a48.14 48.14 0 0 0-48 48v336h512zm-64 272H128V64h384zm112 96H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33-17.47-32.77-32H16a16 16 0 0 0-16 16v16a64.19 64.19 0 0 0 64 64h512a64.19 64.19 0 0 0 64-64v-16a16 16 0 0 0-16-16z"></path></svg>
+                        </div>
+                        <h3 class="mt-4 text-lg font-bold text-text">Online Sessions</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-gray-600">Flexible telehealth options available so you can access quality care from the comfort of your home.</p>
+                    </div>
+                    <div class="group rounded-2xl border border-gray-100 bg-white p-6 shadow-card transition-all duration-300 hover:border-primary/20 hover:shadow-elevated hover:-translate-y-1 transform transition-transform">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-gradient-primary group-hover:text-white">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
+                        </div>
+                        <h3 class="mt-4 text-lg font-bold text-text">Supportive Environment</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-gray-600">A warm, welcoming space where you feel heard, understood, and empowered to make meaningful changes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section-padding bg-gradient-soft fade-up">
+            <div class="mx-auto max-w-7xl">
+                <div class="text-center">
+                    <span class="text-sm font-semibold uppercase tracking-wider text-primary">Blog</span>
+                    <h2 class="section-heading mx-auto mt-2">Mental Health <span class="text-gradient">Insights & Resources</span></h2>
+                    <p class="section-subheading mx-auto">Expert articles on therapy, wellness, relationships, and personal growth to support your mental health journey.</p>
+                </div>
+                
+                <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Blog Post 1 -->
+                    <article class="group overflow-hidden rounded-2xl bg-white shadow-card transition-shadow duration-300 hover:shadow-elevated hover:-translate-y-1 transform transition-transform">
+                        <div class="relative aspect-[16/10] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1499203537920-2bd0224ac875?w=800&q=80" alt="Understanding Anxiety" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 text-xs text-gray-500">
+                                <span>June 15, 2025</span>
+                                <span class="flex items-center gap-1"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-3.5 w-3.5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg> 6 min read</span>
+                            </div>
+                            <h3 class="mt-3 text-lg font-bold text-text line-clamp-2 group-hover:text-primary transition-colors">Understanding Anxiety: Signs, Symptoms, and When to Seek Help</h3>
+                            <p class="mt-2 text-sm leading-relaxed text-gray-600" style="display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">What if something goes wrong? For many people, this question passes through the mind and fades away. But for someone struggling with anxiety, it can become an endless loop...</p>
+                        </div>
+                    </article>
+                    <!-- Blog Post 2 -->
+                    <article class="group overflow-hidden rounded-2xl bg-white shadow-card transition-shadow duration-300 hover:shadow-elevated hover:-translate-y-1 transform transition-transform">
+                        <div class="relative aspect-[16/10] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80" alt="Mindfulness Techniques" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 text-xs text-gray-500">
+                                <span>June 8, 2025</span>
+                                <span class="flex items-center gap-1"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-3.5 w-3.5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg> 5 min read</span>
+                            </div>
+                            <h3 class="mt-3 text-lg font-bold text-text line-clamp-2 group-hover:text-primary transition-colors">5 Mindfulness Techniques for Daily Stress Relief</h3>
+                            <p class="mt-2 text-sm leading-relaxed text-gray-600" style="display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">Daily stress is inevitable, but staying overwhelmed doesn't have to be. Mindfulness is the practice of intentionally bringing your attention to the present moment without judgment...</p>
+                        </div>
+                    </article>
+                    <!-- Blog Post 3 -->
+                    <article class="group overflow-hidden rounded-2xl bg-white shadow-card transition-shadow duration-300 hover:shadow-elevated hover:-translate-y-1 transform transition-transform">
+                        <div class="relative aspect-[16/10] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&q=80" alt="Couples Therapy" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 text-xs text-gray-500">
+                                <span>May 28, 2025</span>
+                                <span class="flex items-center gap-1"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-3.5 w-3.5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg> 7 min read</span>
+                            </div>
+                            <h3 class="mt-3 text-lg font-bold text-text line-clamp-2 group-hover:text-primary transition-colors">How Couples Therapy Can Strengthen Your Relationship</h3>
+                            <p class="mt-2 text-sm leading-relaxed text-gray-600" style="display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">Healthy relationships aren't built on the absence of conflict—they're built on the ability to navigate it together. Couples therapy provides a safe, neutral space...</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="section-padding bg-gradient-soft fade-up">
+            <div class="mx-auto max-w-7xl">
+                <div class="text-center">
+                    <span class="text-sm font-semibold uppercase tracking-wider text-primary">Testimonials</span>
+                    <h2 class="section-heading mx-auto mt-2">What My <span class="text-gradient">Clients Say</span></h2>
+                    <p class="section-subheading mx-auto">Real stories from people who have transformed their lives through therapy.</p>
+                </div>
+                
+                <div class="relative mx-auto mt-14 max-w-3xl">
+                    <div id="testimonial-container" class="glass rounded-3xl p-8 sm:p-12 min-h-[250px]">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-slide active">
+                            <div class="flex gap-1 text-amber-400">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                            <blockquote class="mt-6 text-lg leading-relaxed text-gray-700 sm:text-xl">
+                                "She helped me work through years of anxiety that I thought I'd never overcome. Her compassionate approach and practical tools changed my life. I finally feel like myself again."
+                            </blockquote>
+                            <div class="mt-8 flex items-center gap-4">
+                                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-primary text-sm font-bold text-white">ER</div>
+                                <div>
+                                    <p class="font-semibold text-text">Musfirah Saleem</p>
+                                    <p class="text-sm text-gray-500">Individual Therapy Client</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-slide">
+                            <div class="flex gap-1 text-amber-400">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                            <blockquote class="mt-6 text-lg leading-relaxed text-gray-700 sm:text-xl">
+                                "finally found the courage to heal. The trauma-informed care I received was life-changing. I'm forever grateful for this safe space."
+                            </blockquote>
+                            <div class="mt-8 flex items-center gap-4">
+                                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-primary text-sm font-bold text-white">MT</div>
+                                <div>
+                                    <p class="font-semibold text-text">Minahil</p>
+                                    <p class="text-sm text-gray-500">Trauma Therapy Client</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-slide">
+                            <div class="flex gap-1 text-amber-400">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                            <blockquote class="mt-6 text-lg leading-relaxed text-gray-700 sm:text-xl">
+                                "Our family was struggling to communicate after a difficult transition. She helped us rebuild trust and understanding. The sessions were transformative for all of us."
+                            </blockquote>
+                            <div class="mt-8 flex items-center gap-4">
+                                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-primary text-sm font-bold text-white">SW</div>
+                                <div>
+                                    <p class="font-semibold text-text">Irza Malik</p>
+                                    <p class="text-sm text-gray-500">Family Therapy Client</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 flex items-center justify-center gap-4">
+                        <button id="test-prev" class="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition-colors hover:border-primary hover:text-primary" aria-label="Previous testimonial">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        </button>
+                        <div class="flex gap-2" id="test-indicators">
+                            <button class="h-2 rounded-full transition-all duration-300 w-8 bg-primary test-dot" data-index="0"></button>
+                            <button class="h-2 rounded-full transition-all duration-300 w-2 bg-gray-300 test-dot" data-index="1"></button>
+                            <button class="h-2 rounded-full transition-all duration-300 w-2 bg-gray-300 test-dot" data-index="2"></button>
+                        </div>
+                        <button id="test-next" class="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition-colors hover:border-primary hover:text-primary" aria-label="Next testimonial">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding bg-white fade-up">
+            <div class="mx-auto max-w-3xl">
+                <div class="text-center">
+                    <span class="text-sm font-semibold uppercase tracking-wider text-primary">FAQ</span>
+                    <h2 class="section-heading mx-auto mt-2">Frequently Asked <span class="text-gradient">Questions</span></h2>
+                    <p class="section-subheading mx-auto">Find answers to common questions about therapy, sessions, and getting started.</p>
+                </div>
+                
+                <div class="mt-12 space-y-3">
+                    <div class="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-card faq-item">
+                        <button class="faq-button flex w-full items-center justify-between gap-4 p-5 text-left">
+                            <span class="font-semibold text-text">What should I expect during my first therapy session?</span>
+                            <span class="shrink-0 text-primary accordion-icon rotate"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                        </button>
+                        <div class="accordion-content open">
+                            <p class="border-t border-gray-100 px-5 pb-5 pt-3 text-sm leading-relaxed text-gray-600">Your first session is an opportunity to get to know each other. We'll discuss what brought you to therapy, your goals, and your history. I'll explain my approach and answer any questions. There's no pressure — it's a safe space to share at your own pace.</p>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-card faq-item">
+                        <button class="faq-button flex w-full items-center justify-between gap-4 p-5 text-left">
+                            <span class="font-semibold text-text">How long does therapy typically last?</span>
+                            <span class="shrink-0 text-primary accordion-icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="border-t border-gray-100 px-5 pb-5 pt-3 text-sm leading-relaxed text-gray-600">The duration varies based on your individual needs and goals. Some clients benefit from short-term therapy (8-12 sessions), while others prefer ongoing support. We'll regularly review your progress and adjust the treatment plan together.</p>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-card faq-item">
+                        <button class="faq-button flex w-full items-center justify-between gap-4 p-5 text-left">
+                            <span class="font-semibold text-text">Do you offer online therapy sessions?</span>
+                            <span class="shrink-0 text-primary accordion-icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="border-t border-gray-100 px-5 pb-5 pt-3 text-sm leading-relaxed text-gray-600">Yes! I offer secure, HIPAA-compliant video sessions for clients who prefer the convenience of telehealth. Online sessions are just as effective as in-person therapy for most concerns.</p>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-card faq-item">
+                        <button class="faq-button flex w-full items-center justify-between gap-4 p-5 text-left">
+                            <span class="font-semibold text-text">Is everything I share confidential?</span>
+                            <span class="shrink-0 text-primary accordion-icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="border-t border-gray-100 px-5 pb-5 pt-3 text-sm leading-relaxed text-gray-600">Absolutely. Confidentiality is a cornerstone of therapy. Everything discussed in sessions is private, with very limited exceptions required by law (such as imminent harm to yourself or others).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section-padding fade-up">
+            <div class="relative mx-auto max-w-7xl overflow-hidden rounded-3xl">
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1498837167922-ddd27525cd34?w=1600&q=80')"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/80" style="background: linear-gradient(to right, rgba(79, 70, 229, 0.9), rgba(6, 182, 212, 0.8));"></div>
+                
+                <div class="relative px-8 py-16 text-center sm:px-16 sm:py-20">
+                    <h2 class="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">Ready to Start Your Healing Journey?</h2>
+                    <p class="mx-auto mt-4 max-w-xl text-lg text-white/90">Take the first step toward a healthier, happier you. Book a free 15-minute consultation today.</p>
+                    <div class="mt-8">
+                        <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-primary shadow-elevated transition-all duration-300 hover:scale-105 hover:shadow-lg" style="text-decoration:none;">
+                            Book Appointment <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding bg-white fade-up">
+            <div class="mx-auto max-w-7xl">
+                <div class="text-center mb-16">
+                    <span class="text-sm font-semibold uppercase tracking-wider text-primary">Contact</span>
+                    <h2 class="section-heading mx-auto mt-2">Get in <span class="text-gradient">Touch</span></h2>
+                    <p class="section-subheading mx-auto">Ready to take the first step? Reach out to schedule a consultation or ask any questions about my services.</p>
+                </div>
+                
+                <div class="grid gap-12 lg:grid-cols-2">
+                    <div>
+                        <h2 class="text-2xl font-bold text-text">Contact Information</h2>
+                        <p class="mt-4 text-gray-600">I'm here to help. Feel free to reach out through any of the channels below, or fill out the form and I'll respond within 24 hours.</p>
+                        
+                        <div class="mt-8 space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-text">Address</p>
+                                    <p class="mt-1 text-sm text-gray-600">Lahore, DHA Phase 5</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-text">Email</p>
+                                    <a href="mailto:faizsehar7@gmail.com" class="mt-1 text-sm text-gray-600 transition-colors hover:text-primary" style="text-decoration:none;">faizsehar7@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="h-5 w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-text">Phone</p>
+                                    <a href="tel:+923038810635" class="mt-1 text-sm text-gray-600 transition-colors hover:text-primary" style="text-decoration:none;">+92- 3038810635</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="contact-form-container">
+                        <form id="contact-form" class="glass rounded-3xl p-6 sm:p-8">
+                            <div class="grid gap-5 sm:grid-cols-2">
+                                <div>
+                                    <label for="name" class="mb-1.5 block text-sm font-medium text-text">Full Name</label>
+                                    <input type="text" id="name" required class="w-full rounded-xl border border-gray-200 bg-white/80 px-4 py-3 text-sm text-text outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" placeholder="Enter your full name">
+                                </div>
+                                <div>
+                                    <label for="email" class="mb-1.5 block text-sm font-medium text-text">Email Address</label>
+                                    <input type="email" id="email" required class="w-full rounded-xl border border-gray-200 bg-white/80 px-4 py-3 text-sm text-text outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" placeholder="Enter your email address">
+                                </div>
+                                <div>
+                                    <label for="phone" class="mb-1.5 block text-sm font-medium text-text">Phone Number</label>
+                                    <input type="tel" id="phone" required class="w-full rounded-xl border border-gray-200 bg-white/80 px-4 py-3 text-sm text-text outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" placeholder="Enter your phone number">
+                                </div>
+                                <div>
+                                    <label for="subject" class="mb-1.5 block text-sm font-medium text-text">Subject</label>
+                                    <input type="text" id="subject" required class="w-full rounded-xl border border-gray-200 bg-white/80 px-4 py-3 text-sm text-text outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" placeholder="Enter your subject">
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label for="message" class="mb-1.5 block text-sm font-medium text-text">Message</label>
+                                    <textarea id="message" rows="5" required class="w-full rounded-xl border border-gray-200 bg-white/80 px-4 py-3 text-sm text-text outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" placeholder="Enter your message"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" id="submit-btn" class="btn-primary mt-6 w-full sm:w-auto">
+                                <span id="submit-text">Submit Message</span>
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
+                            </button>
+                        </form>
+                        <div id="success-message" class="glass rounded-3xl p-8 text-center sm:p-12 hidden">
+                            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent/20 text-accent mb-6">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" class="h-8 w-8" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
+                            </div>
+                            <h3 class="mt-6 text-2xl font-bold text-text">Message Sent!</h3>
+                            <p class="mt-2 text-gray-600">Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                            <button id="send-another-btn" class="btn-primary mt-6">Send Another Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
+    <footer class="bg-text text-white">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
                 <div>
-                    <h3>Sehar Faiz</h3>
-                    <p>Clinical Psychologist<br>Lahore, Pakistan</p>
+                    <a href="#home" class="flex items-center gap-2" style="text-decoration:none;">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-primary">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="h-6 w-6 text-white" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M13 8.57a1.43 1.43 0 1 0 0 2.86 1.43 1.43 0 0 0 0-2.86z"></path><path d="M13 3C9.25 3 6.2 5.94 6.02 9.64L4.1 12.2a.5.5 0 0 0 .4.8H6v3c0 1.1.9 2 2 2h1v3h7v-4.68A6.999 6.999 0 0 0 13 3zm3 7c0 .13-.01.26-.02.39l.83.66c.08.06.1.16.05.25l-.8 1.39c-.05.09-.16.12-.24.09l-.99-.4c-.21.16-.43.29-.67.39L14 13.83c-.01.1-.1.17-.2.17h-1.6c-.1 0-.18-.07-.2-.17l-.15-1.06c-.25-.1-.47-.23-.68-.39l-.99.4c-.09.03-.2 0-.25-.09l-.8-1.39a.19.19 0 0 1 .05-.25l.84-.66c-.01-.13-.02-.26-.02-.39s.02-.27.04-.39l-.85-.66c-.08-.06-.1-.16-.05-.26l.8-1.38c.05-.09.15-.12.24-.09l1 .4c.2-.15.43-.29.67-.39L12 6.17c.02-.1.1-.17.2-.17h1.6c.1 0 .18.07.2.17l.15 1.06c.24.1.46.23.67.39l1-.4c.09-.03.2 0 .24.09l.8 1.38a.2.2 0 0 1-.05.26l-.85.66c.03.12.04.25.04.39z"></path></svg>
+                        </div>
+                        <div>
+                            <span class="text-sm font-bold">Sehar Faiz</span>
+                            <p class="text-xs text-gray-400">Clinical Psychologist</p>
+                        </div>
+                    </a>
+                    <p class="mt-4 text-sm leading-relaxed text-gray-400">Compassionate, evidence-based therapy to help you heal, grow, and live your best life.</p>
+                    <div class="mt-6 flex gap-3">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 text-gray-300 transition-colors hover:bg-primary hover:text-white">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 text-gray-300 transition-colors hover:bg-primary hover:text-white">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 text-gray-300 transition-colors hover:bg-primary hover:text-white">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 text-gray-300 transition-colors hover:bg-primary hover:text-white">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#expertise">Expertise</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-300">Quick Links</h3>
+                    <ul class="mt-4 space-y-3" style="list-style:none;padding:0;margin:0;">
+                        <li><a href="#home" class="text-sm text-gray-400 transition-colors hover:text-white" style="text-decoration:none;">Home</a></li>
+                        <li><a href="#about" class="text-sm text-gray-400 transition-colors hover:text-white" style="text-decoration:none;">About</a></li>
+                        <li><a href="#services" class="text-sm text-gray-400 transition-colors hover:text-white" style="text-decoration:none;">Services</a></li>
+                        <li><a href="#blog" class="text-sm text-gray-400 transition-colors hover:text-white" style="text-decoration:none;">Blog</a></li>
+                        <li><a href="#contact" class="text-sm text-gray-400 transition-colors hover:text-white" style="text-decoration:none;">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-social">
-                    <h3>Connect</h3>
-                    <a href="https://pk.linkedin.com/in/sehar-faiz-74a44b355" target="_blank" class="social-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        LinkedIn
-                    </a>
-                    <a href="https://wa.me/?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Sehar%20Faiz." target="_blank" class="social-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                        WhatsApp
-                    </a>
+                
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-300">Services</h3>
+                    <ul class="mt-4 space-y-3" style="list-style:none;padding:0;margin:0;">
+                        <li><a href="#services" class="text-sm text-gray-400 transition-colors hover:text-white" style="text-decoration:none;">Individual Therapy</a></li>
+                        <li><a href="#services" class="text-sm text-gray-400 transition-colors hover:text-white" style="text-decoration:none;">Child Counseling</a></li>
+                        <li><a href="#services" class="text-sm text-gray-400 transition-colors hover:text-white" style="text-decoration:none;">Couple Therapy</a></li>
+                        <li><a href="#services" class="text-sm text-gray-400 transition-colors hover:text-white" style="text-decoration:none;">Family Therapy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-300">Contact Info</h3>
+                    <ul class="mt-4 space-y-4" style="list-style:none;padding:0;margin:0;">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-0.5 h-4 w-4 shrink-0 text-secondary"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="h-full w-full" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg></div>
+                            <a href="mailto:faizsehar7@gmail.com" class="text-sm text-gray-400 transition-colors hover:text-white" style="text-decoration:none;">faizsehar7@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-0.5 h-4 w-4 shrink-0 text-secondary"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="h-full w-full" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg></div>
+                            <a href="tel:+923038810635" class="text-sm text-gray-400 transition-colors hover:text-white" style="text-decoration:none;">+92- 3038810635</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-0.5 h-4 w-4 shrink-0 text-secondary"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" class="h-full w-full" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg></div>
+                            <span class="text-sm text-gray-400">Lahore, DHA Phase 5</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>Confidential, respectful, and evidence-based psychological support.</p>
-                <p style="margin-top: 10px;">&copy; 2026 Sehar Faiz. All rights reserved.</p>
+            
+            <div class="mt-12 border-t border-white/10 pt-8 text-center">
+                <p class="text-sm text-gray-500">&copy; <span id="year"></span> Sehar Faiz. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Sehar%20Faiz." target="_blank" class="whatsapp-float">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        <span>Message Us</span>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923038810635" target="_blank" rel="noopener noreferrer" style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 1000; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="32px" width="32px" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 411.3c-33 0-65.4-8.8-93.8-25.5l-6.7-4-69.7 18.3L72 331.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
     </a>
 
-    <script>
-        // Simple script for mobile menu toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        
-        if(menuToggle) {
-            menuToggle.addEventListener('click', () => {
-                if (navLinks.style.display === 'flex') {
-                    navLinks.style.display = 'none';
-                } else {
-                    navLinks.style.display = 'flex';
-                    navLinks.style.flexDirection = 'column';
-                    navLinks.style.position = 'absolute';
-                    navLinks.style.top = '100%';
-                    navLinks.style.left = '0';
-                    navLinks.style.width = '100%';
-                    navLinks.style.backgroundColor = 'rgba(249, 252, 251, 0.98)';
-                    navLinks.style.padding = '20px';
-                    navLinks.style.borderBottom = '1px solid #CFE8DD';
-                }
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
