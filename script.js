@@ -105,19 +105,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 7. Testimonials Slider
     const slides = document.querySelectorAll('.testimonial-slide');
+    const track = document.getElementById('testimonial-track');
     const dots = document.querySelectorAll('.test-dot');
     const prevBtn = document.getElementById('test-prev');
     const nextBtn = document.getElementById('test-next');
     let currentSlide = 0;
     
     function showSlide(index) {
-        slides.forEach(s => s.classList.remove('active'));
         dots.forEach(d => {
             d.classList.remove('w-8', 'bg-primary');
             d.classList.add('w-2', 'bg-gray-300');
         });
-        
+        slides.forEach(s => s.classList.remove('active'));
         slides[index].classList.add('active');
+        
         dots[index].classList.remove('w-2', 'bg-gray-300');
         dots[index].classList.add('w-8', 'bg-primary');
         currentSlide = index;
@@ -138,11 +139,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     let sliderInterval = setInterval(nextSlide, 6000);
-    const sliderContainer = document.getElementById('testimonial-container');
-    sliderContainer.addEventListener('mouseenter', () => clearInterval(sliderInterval));
-    sliderContainer.addEventListener('mouseleave', () => {
-        sliderInterval = setInterval(nextSlide, 6000);
-    });
+    const sliderContainer = track.parentElement;
+    if (sliderContainer) {
+        sliderContainer.addEventListener('mouseenter', () => clearInterval(sliderInterval));
+        sliderContainer.addEventListener('mouseleave', () => {
+            sliderInterval = setInterval(nextSlide, 6000);
+        });
+    }
 
     // 8. Contact Form
     const form = document.getElementById('contact-form');
@@ -153,11 +156,24 @@ document.addEventListener('DOMContentLoaded', () => {
     
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+        
+        const name = document.getElementById('name').value.trim();
+        const message = document.getElementById('message').value.trim();
+        
+        if (!name || !message) {
+            alert('Please enter both your name and message.');
+            return;
+        }
+
         submitBtn.disabled = true;
         submitBtn.style.opacity = '0.6';
         submitText.textContent = 'Sending...';
         
-        // Simulate API call
+        const text = `Hi Sehar, I am ${name}.\n\n${message}`;
+        const encodedText = encodeURIComponent(text);
+        
+        window.open(`https://wa.me/923038810635?text=${encodedText}`, '_blank');
+        
         setTimeout(() => {
             form.style.display = 'none';
             successMsg.classList.remove('hidden');
@@ -166,11 +182,46 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = false;
             submitBtn.style.opacity = '1';
             submitText.textContent = 'Submit Message';
-        }, 1000);
+        }, 500);
     });
     
     sendAnotherBtn.addEventListener('click', () => {
         successMsg.classList.add('hidden');
         form.style.display = 'block';
     });
+    
+    // 9. Scroll to Top Button
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    if (scrollToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.opacity = '1';
+                scrollToTopBtn.style.pointerEvents = 'auto';
+                scrollToTopBtn.style.transform = 'translateY(0)';
+            } else {
+                scrollToTopBtn.style.opacity = '0';
+                scrollToTopBtn.style.pointerEvents = 'none';
+                scrollToTopBtn.style.transform = 'translateY(15px)';
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        scrollToTopBtn.addEventListener('mouseover', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.transform = 'translateY(0) scale(1.1)';
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('mouseout', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.transform = 'translateY(0) scale(1)';
+            }
+        });
+    }
 });
